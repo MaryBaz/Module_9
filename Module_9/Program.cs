@@ -1,4 +1,4 @@
-﻿namespace Module_9
+﻿namespace Module_9.Task1
 {
     internal class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace Module_9
+﻿namespace Module_9.Task2
 {
     public delegate void dlgSortFamilies(ConsoleKey key);
     public class SortException : Exception
@@ -11,7 +11,7 @@
 
         public void Sort()
         {
-            Console.Write("Укажите вид сортировки: 1 - по возрастанию, 2 - по убыванию (или Escape для выхода): ");
+            Console.Write("Укажите тип сортировки: 1 - по возрастанию, 2 - по убыванию (или Escape для выхода): ");
             ConsoleKeyInfo ki = Console.ReadKey();
             if (ki.Key == ConsoleKey.Escape)
                 return;
@@ -49,7 +49,7 @@
                     Console.WriteLine(ex.Message);
                 }
 
-                Console.Write("Укажите вид сортировки: 1 - по возрастанию, 2 - по убыванию: ");
+                Console.Write("Укажите тип сортировки: 1 - по возрастанию, 2 - по убыванию: ");
                 ki = Console.ReadKey();
                 Console.WriteLine();
             }
@@ -60,7 +60,7 @@
 
     internal class Program
     {
-        static string[] families = { "Иванов", "Петров", "Сидоров", "Иванец", "Скоробогатов" };
+        static string[] families = { "Иванов", "Петров", "Сидоров", "Жуков", "Тетерев" };
         static void Main(string[] args)
         {
             foreach (string family in families)
